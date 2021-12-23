@@ -7,5 +7,6 @@ import (
 func main() {
 	//test.MainGo()
 	//test.MainChannel()
-	test.MainWaitgroup()
+	//test.MainWaitgroup()
+	test.MainFilelistingserver()
 }
