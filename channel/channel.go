@@ -2,6 +2,7 @@ package channel
 
 import (
 	"fmt"
+	channel "pro2/channel/done"
 	"time"
 )
 
@@ -56,9 +57,11 @@ func chanDemo() {
 		channels[i] <- 'A' + i
 	}
 }
+
 func MainChannel() {
 	//chanDemo()
-	bufferedChannel()
+	//bufferedChannel()
 	//channelClose()
-	time.Sleep(time.Second * 100)
+	//time.Sleep(time.Second * 100)
+	channel.MainDone()
 }
