@@ -1,10 +1,9 @@
 package main
 
-import (
-	"pro2/channel"
-)
+import channel "pro2/channel/select"
 
 func main() {
 	//goroutine.MainGoroutine()
-	channel.MainChannel()
+	//channel.MainChannel()
+	channel.MainSelect()
 }
