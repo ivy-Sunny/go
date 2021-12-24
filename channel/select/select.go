@@ -1,19 +1,35 @@
 package channel
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
+func generator() chan int {
+	out := make(chan int)
+	go func() {
+		i := 0
+		for true {
+			time.Sleep(time.Duration(rand.Intn(1500)) * time.Millisecond)
+			out <- i
+			i++
+		}
+	}()
+	return out
+}
 func MainSelect() {
-	var c1, c2 chan int // c1 and c2 is nil
+	var c1, c2 = generator(), generator()
 	/*	n1 := <-c1
 		n2 := <-c2*/
-
-	select {
-	case n := <-c1:
-		fmt.Println("Received from c1: ", n)
-	case n := <-c2:
-		fmt.Println("Received from c2: ", n)
-	default:
-		fmt.Println("No value received")
+	for {
+		select {
+		case n := <-c1:
+			fmt.Println("Received from c1: ", n)
+		case n := <-c2:
+			fmt.Println("Received from c2: ", n)
+			//default:
+			//	fmt.Println("No value received")
+		}
 	}
-
 }
