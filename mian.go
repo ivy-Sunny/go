@@ -1,11 +1,12 @@
 package main
 
-import channel "pro2/channel/pattern"
+import "pro2/maze"
 
 func main() {
 	//goroutine.MainGoroutine()
 	//channel.MainChannel()
 	//channel.MainSelect()
 	//channel.MainAtomic()
-	channel.MainMsgGen()
+	//channel.MainMsgGen()
+	maze.MainMaze()
 }
