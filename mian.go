@@ -1,6 +1,6 @@
 package main
 
-import "pro2/json"
+import http "pro2/http/gindemo"
 
 func main() {
 	//goroutine.MainGoroutine()
@@ -10,5 +10,6 @@ func main() {
 	//channel.MainMsgGen()
 	//maze.MainMaze()
 	//http.MainClient()
-	json.MainJson()
+	//json.MainJson()
+	http.MainGin()
 }
