@@ -1,6 +1,6 @@
 package main
 
-import "pro2/maze"
+import "pro2/json"
 
 func main() {
 	//goroutine.MainGoroutine()
@@ -8,5 +8,7 @@ func main() {
 	//channel.MainSelect()
 	//channel.MainAtomic()
 	//channel.MainMsgGen()
-	maze.MainMaze()
+	//maze.MainMaze()
+	//http.MainClient()
+	json.MainJson()
 }
