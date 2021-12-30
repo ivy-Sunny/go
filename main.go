@@ -8,5 +8,7 @@ func main() {
 	//socket.MainJson()
 	//socket.MainCookie()
 	//socket.MainRedirect()
-	socket.MainStatic()
+	//socket.MainStatic()
+	//socket.MainRegexp()
+	socket.MainRpcServer()
 }
